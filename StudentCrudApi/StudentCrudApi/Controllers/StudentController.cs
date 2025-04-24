@@ -33,15 +33,6 @@ namespace StudentCrudApi.Controllers
             return student;
         }
 
-        //[HttpPatch]
-        //[Route("UpdateStudent/{id}")]
-        //public async Task<ActionResult<Student>> UpdateStudent(Student student)
-        //{
-        //    _context.Entry(student).State = EntityState.Modified;
-        //    await _context.SaveChangesAsync();
-        //    return student;
-        //}
-
         [HttpDelete]
         [Route("DeleteStudent/{id}")]
         public async Task<IActionResult> DeleteStudent(int id)
@@ -52,6 +43,5 @@ namespace StudentCrudApi.Controllers
             await _context.SaveChangesAsync();
             return NoContent();
         }
-
     }
 }
